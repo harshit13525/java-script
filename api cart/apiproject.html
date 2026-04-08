@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="flex justify-between items-center bg-white p-4 shadow">
+
+    <button onclick="toggleCart()" class="relative">
+      🛒
+      <span id="cart-count"
+        class="absolute -top-4 -right-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+        0
+      </span>
+    </button>
+  </div>
+
+  <!-- Products -->
+  <div id="container" class="flex flex-wrap gap-6 justify-center mt-6"></div>
+
+  <!-- Sidebar Cart -->
+  <div id="cart-sidebar"
+    class="fixed top-0 right-[-400px] w-[350px] h-full bg-white shadow-lg p-4 transition-all duration-300 overflow-y-auto">
+
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-lg font-bold">My Cart</h2>
+      <button onclick="toggleCart()"></button>
+    </div>
+
+    <div id="cart-items"></div>
+  </div>
+
+  <script src="apiproject.js"></script>
+
+</body>
+</html>
